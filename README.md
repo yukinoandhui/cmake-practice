@@ -1,1 +1,1 @@
-code of book: <<cmake-practice>> 
+code of book: `<<cmake-practice>> `
