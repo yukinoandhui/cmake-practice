@@ -2,7 +2,7 @@ aux_source_directory(. LIBHELLO_SRC)
 message(STATUS ${LIBHELLO_SRC})
 
 # 注意要install,且这里设置没用，要在最外面的文件中设置，因为存在变量的作用域问题
-set(CMAKE_INSTALL_PREFIX "install_path")
+# set(CMAKE_INSTALL_PREFIX "install_path")
 message(STATUS ${CMAKE_INSTALL_PREFIX})
 
 # set(LIBRARY_OUTPUT_PATH bin)
@@ -19,3 +19,4 @@ message(STATUS "This is the hello_static output name: ${OUTPUT_VALUE}")
 # 一般动态链接库都会有版本号
 set_target_properties(hello PROPERTIES VERSION 1.2 SOVERSION 1)
 install(TARGETS hello hello_static LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
+install(FILES hello.h DESTINATION include/hello)
